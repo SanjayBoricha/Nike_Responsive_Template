@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nike</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+</head>
+<body>
+    <script>
+        var clicks = 0;
+        function menu() {
+            clicks += 1;
+            if (clicks%2 != 0) {
+                document.getElementById("item").style.right = "15vw";
+            }
+            else {
+                document.getElementById("item").style.right = "-200px";
+            }
+        }
+    </script>
+    <header>
+        <img src="img/logo.svg" class="logo">
+        <div id="item" class="nav-items">
+            <a href="#">
+            <span></span>       
+            men</a>
+            <a href="#">
+            <span></span>    
+            women</a>
+            <a href="#">
+            <span></span>    
+            boys</a>
+            <a href="#">
+            <span></span>
+            girls</a>
+        </div>
+        <div class="menu" onclick="menu()"><img src="img/menu.svg">
+        </div>
+    </header>
+
+	<div class="left">
+	    <div class="circle">
+	    <img src="img/shoe.png">
+	    </div>
+	</div>
+	<div class="right">
+	    <div class="content">
+	        <h1>Nike Dual<br>Fusion st2</h1><br>
+	        <p>Price : $500  <br>
+	        </p>
+	        <a href="#">Buy Now !</a>
+	    </div>
+	</div>
+	
+</body>
+</html>

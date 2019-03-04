@@ -1,0 +1,233 @@
+@font-face {
+    font-family: firaBold;
+    src: url(../font/FiraSans-ExtraBold.ttf);
+}
+@font-face {
+    font-family: firaSemiBold;
+    src: url(../font/FiraSans-SemiBold.ttf);
+}
+
+html {
+    background: #eee;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    margin: 20px 0;
+    padding: 0;
+    min-height: 90vh;
+    width: 85%;
+    position: absolute;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+    font-family: firabold;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(95, 95, 95, 0.2);
+    border-radius: 10px 10px 0 0;
+    z-index: 1000;
+}
+header img.logo {
+    height: 30px;
+    width: 60px;
+    padding: 0 20px;
+}
+header div.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    width: 60px;
+    border-radius: 0 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    visibility: hidden;
+}
+header div.menu img {
+    position: absolute;
+}
+header .nav-items{
+    position: absolute;
+    left: 40%;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+header .nav-items a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 60px;
+}
+header .nav-items a span {
+    position: absolute;
+    height: 3px;
+    width: 0;
+    transform-origin: left;
+    background: #000;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+header .nav-items a:hover span{
+    width: 40px;
+}   
+
+div.left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    background: #000;
+    border-radius: 10px 0 0 10px;
+    z-index: 100;
+}
+div.circle {
+    content: '';
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    right: -175px;
+    top: 50%;
+    transform: translatey(-50%);
+    background: radial-gradient(rgb(245, 191, 43) 30%,rgb(248, 184, 45) 60%);
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9),
+    0 0 50px rgba(0, 0, 0, 0.5),
+    0 0 100px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.left img {
+    height: 250px;
+    width: auto;
+    z-index: 100;
+    transform: rotateZ(15deg);
+    -webkit-filter: drop-shadow(5px 5px 10px #222);
+    filter: drop-shadow(5px 5px 20px #222);
+}
+
+div.right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+    background: #fff;
+    border-radius: 0 10px 10px 0;
+    text-align: right;
+    padding: 100px 50px;
+}
+div.right h1{
+    font-size: 4em;
+    margin: 50px 0 0 0;
+    padding: 0;
+}
+div.right p {
+    padding: 30px 0;
+    font-size: 18px;
+    color: #888;
+    font-family: firaSemiBold;
+}
+div.right a {
+    color: #fff;
+    padding: 10px 30px;
+    background: #000;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 100px;
+    font-size: 18px;
+    font-family: firaSemiBold;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+    }
+    header {
+        border-radius: 0;
+        overflow: hidden;
+    }
+    header div.menu{
+        visibility: visible;
+    }
+    header img.logo {
+        padding: 0 10px;
+    }
+    header .nav-items {
+        left: auto;
+        right: -400px;
+        transform-origin: right;
+        transition: .5s;
+    }
+    header .nav-items a {
+        padding: 15px 0px;
+        color: #fff;
+        font-family: firaSemiBold;
+        font-size: 15px;
+    }
+    header .nav-items a span {
+        background: #fff;
+    }
+    div.left {
+        width: 100%;
+        height: 40vh;
+        background: #333;
+        border-radius: 0;
+    }
+    div.circle {
+        top: 100%;
+        transform: translateY(-50%) translateX(-50%);
+        left: 50%;
+        height: 300px;
+        width: 300px;
+    }
+    div.left img {
+        height: 180px;
+        width: auto;
+    }
+    div.right { 
+        margin: 0;
+        padding: 0;
+        top: 40vh;
+        width: 100%;
+        height: 60vh;
+        border-radius: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    div.right .content {
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+    }
+    div.right .content h1 {
+        font-size: 3.5em;
+    }
+    div.right .content p {
+        padding: 0 0 10px 0;
+    }
+}
